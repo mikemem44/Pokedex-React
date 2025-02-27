@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #2a2a40;
+  --dark-navy: #0a0a23;
+  --light-grey: #f5f6f7;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+nav {
+  background-color: var(--dark-navy);
+  padding: 10px 0;
+}
+
+.fcc-logo {
+  width: 210px;
+  display: block;
+  margin: auto;
+}
+
+.title {
+  color: var(--light-grey);
+  display: flex;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 1rem auto;
+}
+
+.container {
+  background: white;
+  color: #1b1b32;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 1.4rem;
+  width: 26rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.label {
+  font-size: large;
+  padding: 0.6rem;
+}
+
+.search-input {
+  height: 2.2rem;
+  width: 50%;
+}
+
+.search-button {
+  background-color: #6c36b3;
+  border:#000;
+  height: 2.2rem;
+  border-radius: 0.3rem;
+  width: 4rem;
+  color: var(--light-grey);
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.search-button:active{
+  background-color: #502b80;
+}
+
+.portrait {
+  background: #fafafa;
+  height: 22rem;
+  margin: 1rem;
+  position: relative;
+}
+
+.poke-info {
+  text-align: left;
+  margin-left: 0;
+  display: block;
+  margin: 0.3rem;
+  padding-top: 0.4rem;
+}
+
+.poke-info span{
+  margin: 0.2rem;
+  font-size: 1.1rem;
+}
+
+#sprite {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+#types {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0.3rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+
+#types span {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.86rem;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #fafafa;
+  color: black;
+}
+
+.stats {
+  color: white;
+}
+
+table, th, td{
+  height: 2rem;
+  border-radius: 0.1rem;
+}
+
+.base {
+  background: #9241ab;
+  font-size: 1.13rem;
+  width: 20rem;
+  margin: 1rem;
+}
+
+.stat {
+  background: #9241ab;
+  width: 3rem;
+  margin: 1rem;
+}
+
+.normal {
+  background-color: #A8A77A;
+}
+
+.fire {
+  background-color: #EE8130;
+}
+
+.water {
+  background-color: #6390F0;
+}
+
+.electric {
+  background-color: #F7D02C;
+}
+
+.grass {
+  background-color: #7AC74C;
+}
+
+.ice {
+  background-color: #96D9D6;
+}
+
+.fighting {
+  background-color: #C22E28;
+}
+
+.poison {
+  background-color: #A33EA1;
+}
+
+.ground {
+  background-color: #E2BF65;
+}
+
+.flying {
+  background-color: #A98FF3;
+}
+
+.psychic {
+  background-color: #F95587;
+}
+
+.bug {
+  background-color: #A6B91A;
+}
+
+.rock {
+  background-color: #B6A136;
+}
+
+.ghost {
+  background-color: #735797;
+}
+
+.dragon {
+  background-color: #6F35FC;
+}
+
+.dark {
+  background-color: #705746;
+}
+
+.steel {
+  background-color: #B7B7CE;
+}
+
+.fairy {
+  background-color: #D685AD;
+}
