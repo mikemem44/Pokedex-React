@@ -134,7 +134,8 @@ function PokemonType({pokeTypes}) {
   )
 }
 
-function PokemonStats(pokeStats) {
+function PokemonStats({pokeStats = []}) {
+  const {isSubmit} = useContext(PokeStateContext);
 
   return (
     <table className="stats">
@@ -145,30 +146,23 @@ function PokemonStats(pokeStats) {
         </tr>
       </thead>
       <tbody>
-        <tr>
-            <td className="base">HP:</td>
-            <td id="hp" className="stat"></td>
-        </tr>
-        <tr>
-            <td className="base">Attack:</td>
-            <td id="attack" className="stat"></td>
-        </tr>
-        <tr>
-            <td className="base">Defense:</td>
-            <td id="defense" className="stat"></td>
-        </tr>
-        <tr>
-            <td className="base">Sp. Attack:</td>
-            <td id="special-attack" className="stat"></td>
-        </tr>
-        <tr>
-            <td className="base">Sp.Defense:</td>
-            <td id="special-defense" className="stat"></td>
-        </tr>
-        <tr>
-            <td className="base">Speed:</td>
-            <td id="speed" className="stat"></td>
-        </tr>
+        {[
+          {name: "hp", base_stat: "HP"},
+          {name: "attack", base_stat: "Attack"},
+          {name: "defense", base_stat: "Defense"},
+          {name: "special-attack", base_stat: "Sp. Attack"},
+          {name: "special-defense", base_stat: "Sp. Defense"},
+          {name: "speed", base_stat: "Speed"},
+        ].map((stat,index) => (
+          <tr key={index}>
+            <td className="base">{stat.base_stat}:</td>
+            <td className="stat">
+              {isSubmit && pokeStats
+                ? pokeStats.find((s) => s.stat.name === stat.name)?.base_stat
+                : "" }
+            </td>
+          </tr>
+        ))}
       </tbody>
   </table>
   )
